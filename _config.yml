@@ -1,0 +1,30 @@
+# Site settings
+title: Freelance Magento Developer Leeds | Dave Herbert
+description: >-
+  Freelance Magento Developer and Software Engineer based in Leeds, West Yorkshire.
+url: "https://www.daveherbert.co.uk/"
+
+# Email
+email: dave@daveherbert.co.uk
+
+# Social
+github_username: daveherbert
+linkedin_username: david-herbert-a819462b
+skype_username: daveherbert.co.uk
+
+# Certifications
+zend_directory_id: ZEND028277
+magento_directory_id: 1760173
+
+# Integrations
+google_analytics_site_id: UA-138734047-1
+
+# Build settings
+markdown: kramdown
+kramdown:
+    auto_ids: false
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-email-protect

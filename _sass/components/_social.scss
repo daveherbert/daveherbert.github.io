@@ -1,0 +1,17 @@
+.social {
+    font-size: 3rem;
+    margin: 1rem 0;
+    margin-left: 16rem;
+    display: inline-block;
+    li {
+        display: inline-block;
+        padding: 0.5rem;
+    }
+    a {
+        color: #000;
+        text-decoration: none;
+        &:hover {
+            color: #ff9900;
+        }
+    }
+}
