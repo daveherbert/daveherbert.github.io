@@ -5,8 +5,10 @@
         {% include header.html %}
         <main>
             {{ content }}
-            {% include certifications.html %}
-            {% include social.html %}
+            <div class="links">
+              {% include certifications.html %}
+              {% include social.html %}
+            </div>
         </main>
         {% include footer.html %}
     </body>

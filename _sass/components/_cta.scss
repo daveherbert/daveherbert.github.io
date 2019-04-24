@@ -1,5 +1,6 @@
 .cta {
     margin: 4rem 0 0;
+    clear: both;
     h3 {
         font-size: 1.35em;
     }
@@ -16,5 +17,8 @@
         &:hover {
             background-color: darken(#ff6600, 8);
         }
+    }
+    @include breakpoint($bp-mid) {
+        margin-bottom: 1rem;
     }
 }

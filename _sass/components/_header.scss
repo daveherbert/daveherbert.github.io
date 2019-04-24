@@ -8,12 +8,26 @@ header {
         padding: 25px 20px;
         float: left;
         font-weight: 100;
+        @include breakpoint($bp-large) {
+            float: none;
+        }
     }
     .cta {
         float: right;
+        clear: none;
         margin: 0;
         a {
             margin: 20px;
+            @include breakpoint($bp-large) {
+                margin: 0 0 30px;
+            }
         }
+        @include breakpoint($bp-large) {
+            float: none;
+        }
+    }
+    @include breakpoint($bp-large) {
+        height: auto;
+        text-align: center;
     }
 }

@@ -1,8 +1,9 @@
 .social {
     font-size: 3rem;
     margin: 1rem 0;
-    margin-left: 16rem;
-    display: inline-block;
+    display: table-cell;
+    width: 50%;
+    text-align: right;
     li {
         display: inline-block;
         padding: 0.5rem;
@@ -13,5 +14,10 @@
         &:hover {
             color: #ff9900;
         }
+    }
+    @include breakpoint($bp-small) {
+        display: block;
+        width: auto;
+        text-align: center;
     }
 }
