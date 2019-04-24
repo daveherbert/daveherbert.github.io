@@ -5,12 +5,16 @@
     }
     a {
         color: #fff;
-        background-color: #000;
+        background-color: #ff6600;
         display: inline-block;
         font-size: 1.6rem;
         line-height: 2.5rem;
         text-decoration: none;
         padding: 0.2rem 1rem;
         margin: 1rem 0;
+        border-radius: 5px;
+        &:hover {
+            background-color: darken(#ff6600, 8);
+        }
     }
 }
