@@ -28,3 +28,5 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-email-protect
+sass:
+    style: compressed
