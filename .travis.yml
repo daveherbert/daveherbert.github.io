@@ -1,0 +1,16 @@
+language: ruby
+
+rvm:
+  - 2.4.0
+
+branches:
+  only:
+    - develop
+
+sudo: false
+
+cache: bundler
+
+script:
+  - JEKYLL_ENV=production bundle exec jekyll build
+
