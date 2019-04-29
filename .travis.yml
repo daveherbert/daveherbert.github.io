@@ -18,3 +18,18 @@ cache: bundler
 script:
   - JEKYLL_ENV=production bundle exec jekyll build
 
+env:
+  global:
+    secure: aO71/9zgYbEOwta6mvV03y47sNqxmOrFHsRyKsXirAxG5HejVJMi0s3om+rRG+j5cXmKSGj/w0eTTh4N7TxOPalaORJLLpO6NPW0xao4nPyA/Nv0XyDQ9w4SCqF4NLVrrGYsTw1/tk89BsIGP/9M80OUQI8tFXl+Mfd5cTJyDbj0p+Bi3Z2pk1+mLbkg0sJOj8rhs4GSF7BIjoGHIP9Bwim9YOmVKf5chXGCoeXaiGGoTAl12LPtILgyp+CuvSvEo+R3Q2Yx5F8JaxTG0GiEvNbdhJRjGUN9Ew1IiWk/wvuwsD79ji0gE/WE35Kj55PXx+nxQvuqCl7qwWJyvM7C9vruDOGYM9OpP2lQHjiAAi+c2HJlL6c2XE8Na9y4BAmb2fwR7v990BfJxJvd/1Um1MyCuZWf9zCcqme4lCgpPZLKnTnQETdqro/pNiA9FzeC0MwoheU6ZJFZxProsgQgqKdpH1w4NCNLldTzfzsydbN8PgiGE2pmpBOah/X9ijDuVhNNWLpHXC71SfrPoFDi9ulRXSklCmmqmTO4uPYfZ6NsmJ0vPsABksLdxql6pMybKjAyMNDK+qZsZ09hk3atsY2+WsT2hxPzP4us0pb3hd2W4BKh7iRWm4w4Mx2U9UEYr5OLAiWaQJTU8YM6Qf88RbZWfnXSMvZH/Jld9r1d2ZA=
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  name: Travis CI
+  email: travis-ci@daveherbert.co.uk
+  keep_history: true
+  local_dir: _site
+  target_branch: master
+  on:
+    branch: develop
