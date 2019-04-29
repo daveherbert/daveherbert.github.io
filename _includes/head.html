@@ -1,9 +1,26 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-    {% feed_meta %}
-    {% seo %}
+    <title>{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{% if page.description %}{{ page.description | escape }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="robots" content="INDEX,FOLLOW">
+    <meta name="og:title" content="{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title }}">
+    <meta name="og:description" content="{% if page.description %}{{ page.description | escape }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="og:site_name" content="{{ site.url }}">
+    <meta name="og:url" content="{{ page.url | replace:'index.html','' | absolute_url }}">
+    {% if page.image %}
+    <meta name="og:image" content="{{ page.image | absolute_url }}">
+    {% endif %}
+    <meta name="og:locale" content="{{ site.locale }}">
+    <script type="application/ld+json">
+    {
+        "name":"{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title }}",
+        "description":"{% if page.description %}{{ page.description | escape }}{% else %}{{ site.description }}{% endif %}",
+        "@type":"WebSite",
+        "url":"{{ page.url | replace:'index.html','' | absolute_url }}",
+        "@context":"http://schema.org"
+    }
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,300i,400,700,700i" rel="stylesheet">
@@ -13,4 +30,7 @@
     {% endif %}
     <link rel="shortcut icon" href="{{ "/favicon.ico" | absolute_url }}" type="image/x-icon">
     <link rel="icon" href="{{ "/favicon.ico" | absolute_url }}" type="image/x-icon">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+    {% feed_meta %}
+    <link rel="sitemap" type="application/xml" title="{{ site.title }}" href="{{ "/sitemap.xml" | absolute_url }}">
 </head>

@@ -3,6 +3,7 @@ title: Freelance Magento Developer Leeds | Dave Herbert
 description: >-
   Freelance Magento Developer and Software Engineer based in Leeds, West Yorkshire.
 url: "https://www.daveherbert.co.uk/"
+locale: en_GB
 
 # Email
 email: dave@daveherbert.co.uk
@@ -25,6 +26,5 @@ kramdown:
     auto_ids: false
 plugins:
   - jekyll-feed
-  - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-email-protect

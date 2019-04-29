@@ -1,5 +1,6 @@
 ---
 layout: default
+image: /assets/images/dave-herbert-freelance-magento-developer.jpg
 ---
 ## Web Developer and Software Engineer based in Leeds, West Yorkshire.
 
